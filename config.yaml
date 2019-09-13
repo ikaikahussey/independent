@@ -1,18 +1,15 @@
 title: Stackbit Ampersand Theme
 baseURL: /
 params:
+  footer:
+    content: '&copy; Add Homonym PBC'
+    has_social: false
+    links: []
+  header:
+    has_nav: false
+    logo_img: /images/artboard-1.png
+    title: Vineyard Blvd.
   layout_style: grid
   palette: green
-  header:
-    title: Ampersand
-    logo_img: images/logo.png
-    has_nav: true
-  footer:
-    content: '&copy; Stackbit-Ampersand. All rights reserved.'
-    links:
-      - text: Made with Stackbit
-        url: 'https://www.stackbit.com'
-        new_window: true
-    has_social: true
 disableKinds:
   - RSS
