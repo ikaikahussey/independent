@@ -8,8 +8,7 @@ params:
   header:
     has_nav: false
     logo_img: /images/artboard-1.png
-    title: Vineyard Blvd.
+    title: The Hawaii Independent
   layout_style: list
-  palette: green
 disableKinds:
   - RSS
