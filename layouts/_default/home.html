@@ -3,10 +3,7 @@
     {{ $include_dict := dict "section" $section "Site" $.Site }}
     {{ partial $section.component $include_dict }}
   {{ end }}
-  <section class="ui grid stackable" id="index_list" role="main_content">
-    <div class="ui one column row">
-       <main class="column updates_list">
-          <section class="stories">
+
             {{ $display_posts := ((.Site.GetPage "section" "/posts").Pages).ByDate.Reverse }}
             {{ range $post := $display_posts }}
             	<article class="ui segment excerpt_story">
@@ -22,10 +19,7 @@
 			</div>
             	</article>
             {{ end }}
-          </section>
-       </main>
-    </div>
-  </section>
+
            
   <nav class="pagination">
     <ul class="nav-links">
