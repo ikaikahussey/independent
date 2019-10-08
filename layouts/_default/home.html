@@ -19,7 +19,7 @@
 				{{ $post.Params.title }}
 			</a>
 			<div class="post-excerpt">
-				<p>{{ $post.Params.Content }}</p>
+				<p>{{ $post.Content }}</p>
 				<time class="published" datetime="{{ $post.Date | dateFormat "2006-01-02 15:04" }}">
 					{{ $post.Date | dateFormat "January 02, 2006" }}
 				</time>
