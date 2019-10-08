@@ -3,13 +3,12 @@
      
     <div class="ui one column row">
       <div class="column">
-      
-    <header class="headline">
-        <time class="published"
+        <div class="stories">
+    <header class="headline">{{ .Params.title }}</header>
+<time class="published"
           datetime="{{ .Date | dateFormat "2006-01-02 15:04" }}">{{ .Date | dateFormat "Monday, January 2, 2006" }}</time>
-      <h1 class="post-title">{{ .Params.title }}</h1>
-    </header><!-- .post-header -->
-    {{ if .Params.subtitle }}
+
+        {{ if .Params.subtitle }}
     <div class="post-subtitle">
       {{ .Params.subtitle | safeHTML }}
     </div><!-- .post-subtitle -->
@@ -23,7 +22,7 @@
       {{ .Content }}
     </div><!-- .post-content -->
       
-      
+        </div>
       </div>
       </div>
   </article><!-- .post -->
