@@ -1,17 +1,28 @@
-<footer id="colophon" class="site-footer">
-  <div class="inner">
-    <div class="site-footer-inside">
-      <p class="site-info">
-        {{ .Site.Params.footer.content | safeHTML }}
-        &nbsp;
-        {{ range $link := .Site.Params.footer.links }}
-        <a href="{{ $link.url }}" {{ if $link.new_window }}target="_blank" rel="noopener"
-          {{ end }}>{{ $link.text }}</a>.
-        {{ end }}
-      </p><!-- .site-info -->
-      {{ if .Site.Params.footer.has_social }}
-        {{ partial "social.html" . }}
-      {{ end }}
-    </div><!-- .site-footer-inside -->
-  </div><!-- .inner -->
-</footer><!-- .site-footer -->
+<footer class="ui grid stackable divided" id="honua">
+<nav class="column eight wide">
+<h2>About</h2>
+<ul class="menu">
+
+<li><a href="/masthead/static/contact/">Contact</a></li>
+
+<li><a href="/masthead/static/awards/">Awards</a></li>
+</ul>
+<div class="source-org vcard copyright">
+<img alt="The Hawaii Independent" class="ui image" src="/static/identity/white_40.png" />
+<h2 style="text-transform: uppercase;">The Hawaii Independent</h2>
+<p>
+Thoughtful civic journalism that moves Hawaii forward.
+</p>
+<small>&#169; 2019 <span class="org fn">The Hawaii Independent Corporation/<a href="http://archipelago.link">Archipelago</a></span> <br>All Rights Reserved</small>
+</div>
+</nav>
+<nav class="column four wide">
+<h2>Read</h2>
+<ul class="menu">
+<li><a href="/">thehawaiiindependent.com</a></li>
+<li><a href="https://twitter.com/theHI">Twitter</a><aside>Live-tweeting, links, and crowd-sourced journalism</aside></li>
+<li><a href="https://facebook.com/theHI">Facebook</a><aside>Links and discussion</aside></li>
+<li><a href="/feed/">RSS Feeds</a></li>
+</ul>
+</nav>
+</footer>
