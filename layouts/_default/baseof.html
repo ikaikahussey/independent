@@ -9,32 +9,25 @@
         <meta name="author" content="The Hawaii Independent">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <link rel="stylesheet" href="{{ (resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "assets/css/main.css" . | resources.ToCSS (dict "indentWidth" 4 "outputStyle" "nested" "precision" 10)).Permalink }}">
         <link rel="shortcut icon" type="image/x-icon" href="http://thehawaiiindependent.com/assets/favicon.ico">
         <link rel="icon" href="http://thehawaiiindependent.com/assets/ico/HIIND_logo_only_16.png" />
         <link rel="apple-touch-icon-precomposed" href="http://thehawaiiindependent.com/assets/ico/HIIND_logo_only_114.png" />
         <link rel="stylesheet/less" type="text/less" href="http://thehawaiiindependent.com/static/semantic/Semantic-UI/build/packaged/css/semantic.css" />
         <link rel="stylesheet" type="text/css" href="http://thehawaiiindependent.com/static/css/hi.css" />
-        <link rel="stylesheet" href="http://thehawaiiindependent.com/assets/css/mods.css">
     </head>
     <body>
         
-        <div id="page" class="ui grid site layout-{{ .Site.Params.layout_style }} palette-{{ .Site.Params.palette }}">
+        <div id="page" class="ui grid">
         
             {{ partial "header.html" . }}
         
-            <div id="content" class="site-content">
-              <main id="main" class="site-main inner">
+            <div>
+              <main>
         
                 {{ block "content" . }}{{ end }}
         
               </main><!-- .site-main -->
             </div><!-- .site-content -->
-        
-            {{ if .Site.Data.subscribe.enabled }}
-              {{ partial "subscribe.html" . }}
-            {{ end }}
-        
             {{ partial "footer.html" . }}
         
           </div><!-- .site -->
