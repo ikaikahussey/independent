@@ -15,20 +15,18 @@
         <link rel="stylesheet" href="https://use.typekit.net/ivs8csc.css">
     </head>
     <body>
-        
         <div id="page" class="ui grid">
-        
             {{ partial "header.html" . }}
-        
-            <div>
-              <main>
-        
-                {{ block "content" . }}{{ end }}
-        
-              </main><!-- .site-main -->
-            </div><!-- .site-content -->
+              <section class="ui grid stackable" id="index_list" role="main_content">
+                <div class="ui one column row">
+                    <main class="column updates_list">
+                        <section class="stories">
+                            {{ block "content" . }}{{ end }}
+                        </section>
+                    </main>
+                </div>
+            </section>
             {{ partial "footer.html" . }}
-        
           </div><!-- .site -->
         <!-- Scripts -->
         <script src="{{ "assets/js/plugins.js" | relURL }}"></script>
