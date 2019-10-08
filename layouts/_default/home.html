@@ -1,8 +1,5 @@
 {{ define "content" }}
-  {{ range $section := .Params.sections }}
-    {{ $include_dict := dict "section" $section "Site" $.Site }}
-    {{ partial $section.component $include_dict }}
-  {{ end }}
+
 
             {{ $display_posts := ((.Site.GetPage "section" "/posts").Pages).ByDate.Reverse }}
             {{ range $post := $display_posts }}
@@ -21,10 +18,8 @@
             {{ end }}
 
            
-  <nav class="pagination">
-    <ul class="nav-links">
-	    <li>2009-2019 Archive</li>
-	</ul>
+  <nav class="ui three item menu">
+	<a href="http://thehawaiiindependent.com/">2009-2019 Archive</a>
   </nav>
 
 
