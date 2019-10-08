@@ -2,17 +2,24 @@
 <html>
     <head>    
         
-        <title>{{ if .Title }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
+        <title>{{ if .Title }}{{ .Title }} - {{ end }}The Hawaii Independent</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="google" content="notranslate" />
-        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i%7CPT+Serif:400,700" rel="stylesheet">
+       <meta name="google" content="notranslate" />
+        <meta name="description" content="News and analysis">
+        <meta name="author" content="The Hawaii Independent">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <link rel="stylesheet" href="{{ (resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "assets/css/main.css" . | resources.ToCSS (dict "indentWidth" 4 "outputStyle" "nested" "precision" 10)).Permalink }}">
-        <link rel="stylesheet" href="/assets/css/mods.css">
+        <link rel="shortcut icon" type="image/x-icon" href="http://thehawaiiindependent.com/assets/favicon.ico">
+        <link rel="icon" href="http://thehawaiiindependent.com/assets/ico/HIIND_logo_only_16.png" />
+        <link rel="apple-touch-icon-precomposed" href="http://thehawaiiindependent.com/assets/ico/HIIND_logo_only_114.png" />
+        <link rel="stylesheet/less" type="text/less" href="http://thehawaiiindependent.com/static/semantic/Semantic-UI/build/packaged/css/semantic.css" />
+        <link rel="stylesheet" type="text/css" href="http://thehawaiiindependent.com/static/css/hi.css" />
+        <link rel="stylesheet" href="http://thehawaiiindependent.com/assets/css/mods.css">
     </head>
     <body>
         
-        <div id="page" class="site layout-{{ .Site.Params.layout_style }} palette-{{ .Site.Params.palette }}">
+        <div id="page" class="ui grid site layout-{{ .Site.Params.layout_style }} palette-{{ .Site.Params.palette }}">
         
             {{ partial "header.html" . }}
         
@@ -34,5 +41,11 @@
         <!-- Scripts -->
         <script src="{{ "assets/js/plugins.js" | relURL }}"></script>
         <script src="{{ "assets/js/main.js" | relURL }}"></script>
+        <script type="7400cf3506345550e833a758-text/javascript" src="/static/js/libs/typekit.js"></script>
+        <script type="7400cf3506345550e833a758-text/javascript" src="/static/js/libs/semantic.min.js"></script>
+        <script src="/static/js/libs/less.js" type="7400cf3506345550e833a758-text/javascript"></script>
+        <script src="https://code.jquery.com/jquery-latest.js" type="7400cf3506345550e833a758-text/javascript"></script>
+
+
     </body> 
 </html>
