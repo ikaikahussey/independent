@@ -15,8 +15,8 @@
       <img class="thumbnail" src="{{ .Params.content_img_path | relURL }}" alt="{{ .Params.title }}" />
     </div>
     {{ end }}
-    <div class="post-content">
-      {{ .Params.content }}
+    <div class="">
+      {{ .Content }}
     </div><!-- .post-content -->
   </article><!-- .post -->
 {{ end }}
