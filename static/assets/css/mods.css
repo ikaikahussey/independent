@@ -1,1 +1,3 @@
 .headline {font-size:1em;font-family:futura-pt-1, futura-pt-2, sans-serif;}
+time {display:inline;}
+time.published {opacity:.6;}
