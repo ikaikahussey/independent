@@ -1,5 +1,9 @@
 {{ define "content" }}
   <article class="ui page grid stackable post post-full" id="content" role="main_content">
+     
+    <div class="ui one column row">
+      <div class="column">
+      
     <header class="headline">
         <time class="published"
           datetime="{{ .Date | dateFormat "2006-01-02 15:04" }}">{{ .Date | dateFormat "Monday, January 2, 2006" }}</time>
@@ -18,5 +22,9 @@
     <div class="">
       {{ .Content }}
     </div><!-- .post-content -->
+      
+      
+      </div>
+      </div>
   </article><!-- .post -->
 {{ end }}
