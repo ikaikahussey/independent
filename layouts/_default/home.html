@@ -17,12 +17,10 @@
 	                {{ end }}
 			<a class="headline" href="{{ $post.URL }}" rel="bookmark">
 				{{ $post.Params.title }}
-			</a>
+			</a> <time datetime="{{ $post.Date | dateFormat "2006-01-02 15:04" }}">
+					{{ $post.Date | dateFormat "January 02, 2006" }}</time>
 			<div class="post-excerpt">
 				<p>{{ $post.Content }}</p>
-				<time class="published" datetime="{{ $post.Date | dateFormat "2006-01-02 15:04" }}">
-					{{ $post.Date | dateFormat "January 02, 2006" }}
-				</time>
 			</div>
             	</article>
             {{ end }}
