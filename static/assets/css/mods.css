@@ -4,6 +4,5 @@ time {display:inline;}
 time.published {opacity:.6;margin-left:1em;}
 #branding_nav img {height: 20px;}
 #branding_nav {background: #333;}
-.stories .ui.segment {border-bottom: 1px #333 solid;
-  border-radius: 0;}
+.stories .ui.segment {border-radius: 0;}
 hr {border-bottom: 1px #333 solid;width:50%;}
