@@ -4,6 +4,7 @@ title: >-
   recurrence
 date: 2019-08-26T22:22:13.496Z
 thumb_img_path: /images/tsushima_maru_1944.jpg
+content_img_path: /images/tsushima_maru_1944.jpg
 layout: post
 ---
 August 22, 2019, marked the 75th Anniversary of the Tsushima Maru catastrophe when a cargo passenger ship evacuating 834 schoolchildren from Naha, Okinawa to Nagasaki, Japan in anticipation of the US invasion was lethally torpedoed by the USS Bowfin. Had these refugees that perished with the Tsushima Maru not met their ghastly doom in the East China Seas and made their destination, would they still have had to face gruesome deaths in the thermonuclear blast at Nagasaki? Or, might they have remained in Okinawa as fodder, conscripts or sexual servitude for Imperial Japan troops, possibly trapped in the crossfire of the bloodiest Pacific land battle in which over a quarter of Okinawan locals were slaughtered or worse? Given the frequency and universality that such “tragedies” reoccur throughout wars past and present, perhaps it is disingenuous if not deceptive to identify such politically created catastrophes as “tragedies” = as if they were “random accidents,” rather than natural outcomes and symptomatic consequences of war?
