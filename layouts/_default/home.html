@@ -1,5 +1,9 @@
 {{ define "content" }}
 
+  <section class="ui grid stackable" id="index_list" role="main_content">
+                <div class="twelve wide column">
+                    <main class="">
+
 {{ $display_posts := ((.Site.GetPage "section" "/posts").Pages).ByDate.Reverse }}
 {{ range $post := $display_posts }}
 <article class="">
@@ -19,4 +23,8 @@
 <nav class="ui three item menu">
 	<a href="http://thehawaiiindependent.com/">2009-2019 Archive</a>
 </nav>
+			</main>
+	  </div>
+</section>
+			    
 {{ end }}
