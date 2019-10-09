@@ -17,13 +17,9 @@
     <body>
         <div id="page" class="">
             {{ partial "header.html" . }}
-              <section class="ui grid stackable" id="index_list" role="main_content">
-                <div class="twelve wide column">
-                    <main class="">
+            
                             {{ block "content" . }}{{ end }}
-                    </main>
-                </div>
-            </section>
+                  
             {{ partial "footer.html" . }}
           </div><!-- .site -->
         <!-- Scripts -->
