@@ -15,14 +15,12 @@
         <link rel="stylesheet" href="https://use.typekit.net/ivs8csc.css">
     </head>
     <body>
-        <div id="page" class="ui grid">
+        <div id="page" class="">
             {{ partial "header.html" . }}
               <section class="ui grid stackable" id="index_list" role="main_content">
-                <div class="eight wide column">
-                    <main class="updates_list">
-                        <section class="stories">
+                <div class="twelve wide column">
+                    <main class="">
                             {{ block "content" . }}{{ end }}
-                        </section>
                     </main>
                 </div>
             </section>
