@@ -1,4 +1,15 @@
 {{ define "content" }}
+
+{{ if .Params.content_img_path }}
+  
+    <img class="" src="{{ .Params.content_img_path | relURL }}" alt="{{ .Params.title }}" />
+{{ end }}
+
+
+  <section class="ui grid stackable" id="index_list" role="main_content">
+                <div class="twelve wide column">
+                    <main class="">
+
 <article>
 <header class="headline">
     {{ .Params.title }}
@@ -11,13 +22,13 @@
       {{ .Params.subtitle | safeHTML }}
     </div><!-- .post-subtitle -->
 {{ end }}
-{{ if .Params.content_img_path }}
-  <div class="">
-    <img class="" src="{{ .Params.content_img_path | relURL }}" alt="{{ .Params.title }}" />
-  </div>
-{{ end }}
+
 <div class="">
   {{ .Content }}
 </div><!-- .post-content -->
 </article>
+                        
+                    </main>
+      </div>
+</section>
 {{ end }}
