@@ -1,7 +1,7 @@
 .headline {font-size:1.5em;font-family:futura-pt-1, futura-pt-2, sans-serif;font-weight:bold;}
 a.headline {text-decoration:none;}
-time {display:inline;}
-time.published {opacity:.6;margin-left:1em;}
+time {display:block;}
+time.published {opacity:.4;margin-left:0em;font-size:.8em;}
 #branding_nav img {height: 20px;}
 #branding_nav {background: #333;}
 .stories .ui.segment {border-radius: 0;padding:20px 0px;}
