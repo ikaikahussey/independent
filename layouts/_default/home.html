@@ -3,7 +3,7 @@
 
             {{ $display_posts := ((.Site.GetPage "section" "/posts").Pages).ByDate.Reverse }}
             {{ range $post := $display_posts }}
-            	<article class="ui segment excerpt_story">
+            	<article class="">
 	                {{ if $post.Params.thumb_img_path }}
 	                  <a class="post-card-thumbnail" href="{{ $post.URL }}">
 	                    <img class="thumbnail" src="{{ $post.Params.thumb_img_path | relURL }}" alt="{{ $post.Params.title }}" />
