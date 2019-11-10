@@ -282,10 +282,10 @@ models:
         label: Page Menus
         description: Which menus should this page show up in
   post:
-    type: page
-    label: Post
-    template: post
-    folder: posts
+    type: story
+    label: Story
+    template: story
+    folder: story
     fields:
       - type: string
         name: title

@@ -1,4 +1,4 @@
-title: Stackbit Ampersand Theme
+title: The Hawaii Independent
 baseURL: /
 params:
   footer:
@@ -8,7 +8,8 @@ params:
   header:
     has_nav: false
     logo_img: /images/artboard-1.png
-    title: The Hawaii Independent
   layout_style: list
 disableKinds:
   - RSS
+paginate: 10
+PaginatePath : story

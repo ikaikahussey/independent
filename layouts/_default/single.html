@@ -1,0 +1,46 @@
+{{ define "main" }}
+{{ if .Params.content_img_path }}
+    <img class="" src="{{ .Params.content_img_path | relURL }}" alt="{{ .Params.title }}" />
+{{ end }}
+{{ if .Params.story_photo }}
+    <img class="" src="{{ .Params.story_photo | relURL }}" alt="{{ .Params.title }}" />
+{{ end }}
+	<section class="ui grid stackable" id="index_list" role="main_content">
+	  	<div class="twelve wide column">
+	    	<main class="">
+				<article>
+					<header class="headline">
+					    {{ .Params.title }}
+					</header>
+					{{ if .Params.subtitle }}
+					    <div class="post-subtitle">
+					      {{ .Params.subtitle | safeHTML }}
+					    </div><!-- .post-subtitle -->
+					{{ end }}
+					<ul class="ui menu">
+						<li class="ui item">
+							<time id="date" datetime="{{ .Date | dateFormat "2006-01-02 15:04" }}">
+						    {{ .Date | dateFormat "Monday, January 2, 2006" }}
+							</time>
+						</li>
+					{{ if .Params.community }}	
+						<li class="ui item"><a href="/community/{{ .Params.community }}">{{ .Params.community }}</a></li>
+					{{ end }}
+					{{ if .Params.related_index_org }}	
+						<li class="ui item"><a href="/topic/.Params.related_index_org">{{ .Params.related_index_org }}</a></li>
+					{{ end }}
+					{{ if .Params.user }}
+						<li class="ui item"><a href=>{{ .Params.user }}</a></li>
+					{{ end }}	
+					</ul>	
+					<div class="" id="content">
+						{{ .Content | safeHTML }}
+					</div><!-- .post-content -->
+					<div>
+
+					</div>
+				</article>
+			</main>
+		</div>
+	</section>
+{{ end }}

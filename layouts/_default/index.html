@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+  <section class="ui grid stackable" id="index_list" role="main_content">
+                <div class="twelve wide column">
+                    <main class="">
+
+{{ $paginator := .Paginate (where .Site.Pages "Type" "story") }}
+{{ range .Paginator.Pages }}
+<article class="" id="{{ .Params.url_title }}">
+	{{ if .Params.thumb_img_path }}
+	  <a class="" href="{{ .URL }}">
+	    <img class="" src="{{ .Params.thumb_img_path | relURL }}" alt="{{ .Params.title }}" />
+	  </a>
+	{{ end }}
+	<a class="headline" href="{{ .URL }}" rel="bookmark">{{ .Params.title }}</a>
+	<time class="published" datetime="{{ .Date | dateFormat "2006-01-02 15:04" }}">
+			{{ .Date | dateFormat "January 02, 2006" }}</time>
+	<div class="post-excerpt">
+		<p>{{ .Content }}</p>
+	</div>
+	<hr>
+</article>
+{{ end }}
+<div class="">
+{{ partial "pagination.html" . }}
+</div>
+			</main>
+	  </div>
+</section>
+			    
+{{ end }}
