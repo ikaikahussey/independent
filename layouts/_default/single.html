@@ -5,6 +5,10 @@
 {{ if .Params.story_photo }}
     <img class="" src="{{ .Params.story_photo | relURL }}" alt="{{ .Params.title }}" />
 {{ end }}
+{{ if .Params.art }}
+    <img class="cover" src="{{ .Params.art | relURL }}" alt="{{ .Params.title }}" />
+{{ end }}
+
 	<section class="ui grid stackable" id="index_list" role="main_content">
 	  	<div class="twelve wide column">
 	    	<main class="">
