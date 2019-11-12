@@ -1,0 +1,21 @@
+{exp:low_replace find="entry_date|^\[|$.\]|[]]*$" replace="date|SPACE" multiple="yes" regex="yes"}{exp:json:entries 
+	channel="campaign_news|story|highlighter|info|coop|gallery|reports|calabash_blog|metro|mooolelo|sponsored|poster|poll|magazine|extra|podcasts|signal|bits|forum|hnl|shorts|rotunda|masthead|headless|noted"
+	date_format="Y-m-d"
+	limit="1"
+}{/exp:low_replace}
+{exp:channel:entries 
+	channel="campaign_news|story|highlighter|info|coop|gallery|reports|calabash_blog|metro|mooolelo|sponsored|poster|poll|magazine|extra|podcasts|signal|bits|forum|hnl|shorts|rotunda|masthead|headless|noted"
+	limit="1" 
+	status="open" 
+	dynamic="yes" 
+	require_entry="yes"
+	show_future_entries="yes"
+	}
+{article-body}
+<div id="author_block">
+{exp:member:custom_profile_data member_id="{author_id}"}
+<a href="/authors/{username}" class="meta" id="author">{screen_name}</a>
+{exp:json:members member_id="{author_id}" limit="1" item_root_node="author"}
+{/exp:member:custom_profile_data}
+</div>
+{/exp:channel:entries}

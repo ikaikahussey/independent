@@ -1,56 +1,67 @@
 {{ define "main" }}
-<section class="ui grid stackable" id="index_list" role="main_content">
-	<div class="ui one column row">
-		<main class="column updates_list">
-			<section class="stories">
-				{{ $paginator := .Paginate (where .Site.Pages "Type" "story") }}
-				{{ range .Paginator.Pages }}
-				<excerpt class="ui segment" id="{{ .Params.url_title }}">
-					<section class="ui stackable grid">
-						<div class="column six wide">
-							{{ if .Params.related_index_topic }}
-							<div>
-								<a class="ui label top left" id="topic" href="/topics/democracy/">
-								{{ .Params.related_index_topic }} <i class="circle right icon"></i>
-								</a>
-							</div>
-							{{ end }}
-							{{ if .Params.art_photo }}
-							    <img class="" src="{{ .Params.art_photo | relURL }}" alt="{{ .Params.title }}" />
-							{{ end }}
-							{{ if .Params.art_gallery }}
-							    <img class="ui image" src="{{ .Params.art_gallery | relURL }}" alt="{{ .Params.title }}" />
-							{{ end }}
-							{{ if .Params.art_gallery2 }}
-							    <img class="ui image" src="{{ .Params.art_gallery2 | relURL }}" alt="{{ .Params.title }}" />
-							{{ end }}
-							{{ if .Params.art_thumbnail }}
-							    <img class="ui image" src="{{ .Params.art_thumbnail | relURL }}" alt="{{ .Params.title }}" />
-							{{ end }}
-						</div>
-						<div class="column ten wide">
-							<a class="headline" href="{{ .URL }}" rel="bookmark">
-								{{ .Params.title | safeHTML }}
-							</a>
-							<time class="published" datetime="{{ .Date | dateFormat "2006-01-02 15:04" }}">
-								{{ .Date | dateFormat "January 02, 2006" }}
-							</time>
-							<p class="teaser lead">
-								{{ .Params.teaser }}
-							</p>
-						</div>
-					</section>
-				</excerpt>
+<section class="ui grid" id="index_list" role="main_content">
+	<div class="twelve wide column">
+		<section class="ui divided relaxed items">
+			{{ $paginator := .Paginate (where .Site.Pages "Type" "story") }}
+			{{ range .Paginator.Pages }}
+			<excerpt class="item" id="{{ .Params.url_title }}">
+				{{ if .Params.related_index_topic }}
+					<a class="ui label top left" id="topic" href="/topics/democracy/">
+						{{ .Params.related_index_topic }} <i class="circle right icon"></i>
+					</a>
 				{{ end }}
-			</section>
-		</main>
-		<div class="">
-		{{ partial "pagination.html" . }}
-		</div>
+				{{ if .Params.art_photo }}
+					<div class="image">
+				    	<img class="" src="{{ .Params.art_photo | relURL }}" alt="{{ .Params.title }}" />
+					</div>
+				{{ end }}
+				{{ if .Params.art_gallery }}
+					<div class="image">
+					    <img class="ui image" src="{{ .Params.art_gallery | relURL }}" alt="{{ .Params.title }}" />
+					</div>
+				{{ end }}
+				{{ if .Params.art_gallery2 }}
+				<div class="image">
+				    <img class="ui image" src="{{ .Params.art_gallery2 | relURL }}" alt="{{ .Params.title }}" />
+				</div>
+				{{ end }}
+				{{ if .Params.art_thumbnail }}
+				<div class="image">
+				    <img class="ui image" src="{{ .Params.art_thumbnail | relURL }}" alt="{{ .Params.title }}" />
+				</div>
+				{{ end }}
+				<div class="content">
+					<a class="header" href="{{ .URL }}" rel="bookmark">
+						{{ .Params.title | safeHTML }}
+					</a>
+					<time class="meta" datetime="{{ .Date | dateFormat "2006-01-02 15:04" }}">
+						{{ .Date | dateFormat "January 02, 2006" }}
+					</time>
+					<div class="description">
+						{{ .Params.teaser }}
+					</div>
+				</div>
+			</excerpt>
+		{{ end }}
+		</section>
 	</div>
+	<div class="four wide column">
+
+<!--
+			<div class="ui button test ad" data-text="Button">
+				Holiday Tree Sale
+			</div>
+-->
+
+	</div>
+
+	<div class="ui item pagination">	
+	{{ partial "pagination.html" . }}
+	</div>
+	
 </section>
 
 
 
-			    
+	    
 {{ end }}

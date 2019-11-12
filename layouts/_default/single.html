@@ -1,19 +1,22 @@
 {{ define "main" }}
-{{ if .Params.content_img_path }}
-    <img class="" src="{{ .Params.content_img_path | relURL }}" alt="{{ .Params.title }}" />
-{{ end }}
-{{ if .Params.story_photo }}
-    <img class="" src="{{ .Params.story_photo | relURL }}" alt="{{ .Params.title }}" />
-{{ end }}
-{{ if .Params.art }}
-    <img class="cover" src="{{ .Params.art | relURL }}" alt="{{ .Params.title }}" />
-{{ end }}
+	{{ if .Params.art_photo }}
+	    <img class="cover" src="{{ .Params.art_photo | relURL }}" alt="{{ .Params.title }}" />
+	{{ end }}
+	{{ if .Params.art_gallery }}
+	    <img class="cover" src="{{ .Params.art_gallery | relURL }}" alt="{{ .Params.title }}" />
+	{{ end }}
+	{{ if .Params.art_gallery2 }}
+	    <img class="cover" src="{{ .Params.art_gallery2 | relURL }}" alt="{{ .Params.title }}" />
+	{{ end }}
+	{{ if .Params.art_thumbnail }}
+	    <img class="cover" src="{{ .Params.art_thumbnail | relURL }}" alt="{{ .Params.title }}" />
+	{{ end }}
 
 	<section class="ui grid stackable" id="index_list" role="main_content">
 	  	<div class="twelve wide column">
 	    	<main class="">
 				<article>
-					<header class="headline">
+					<header class="header">
 					    {{ .Params.title }}
 					</header>
 					{{ if .Params.subtitle }}
