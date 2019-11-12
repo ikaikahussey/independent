@@ -1,0 +1,34 @@
+{{ define "main" }}
+
+{{ if .Params.content_img_path }}
+  
+    <img class="" src="{{ .Params.content_img_path | relURL }}" alt="{{ .Params.title }}" />
+{{ end }}
+
+
+  <section class="ui grid stackable" id="index_list" role="main_content">
+                <div class="twelve wide column">
+                    <main class="">
+
+<article>
+<header class="headline">
+    {{ .Params.title | safeHTML }}
+</header>
+<time class="published" datetime="{{ .Date | dateFormat "2006-01-02 15:04" }}">
+    {{ .Date | dateFormat "Monday, January 2, 2006" }}
+</time>
+{{ if .Params.subtitle }}
+    <div class="post-subtitle">
+      {{ .Params.subtitle | safeHTML }}
+    </div><!-- .post-subtitle -->
+{{ end }}
+
+<div class="">
+  {{ .Content }}
+</div><!-- .post-content -->
+</article>
+                        
+                    </main>
+      </div>
+</section>
+{{ end }}

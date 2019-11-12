@@ -15,19 +15,22 @@
 								</a>
 							</div>
 							{{ end }}
-							{{ if .Params.content_img_path }}
-							    <img class="" src="{{ .Params.content_img_path | relURL }}" alt="{{ .Params.title }}" />
+							{{ if .Params.art_photo }}
+							    <img class="" src="{{ .Params.art_photo | relURL }}" alt="{{ .Params.title }}" />
 							{{ end }}
-							{{ if .Params.story_photo }}
-							    <img class="" src="{{ .Params.story_photo | relURL }}" alt="{{ .Params.title }}" />
+							{{ if .Params.art_gallery }}
+							    <img class="ui image" src="{{ .Params.art_gallery | relURL }}" alt="{{ .Params.title }}" />
 							{{ end }}
-							{{ if .Params.art }}
-							    <img class="ui image" src="{{ .Params.art | relURL }}" alt="{{ .Params.title }}" />
+							{{ if .Params.art_gallery2 }}
+							    <img class="ui image" src="{{ .Params.art_gallery2 | relURL }}" alt="{{ .Params.title }}" />
+							{{ end }}
+							{{ if .Params.art_thumbnail }}
+							    <img class="ui image" src="{{ .Params.art_thumbnail | relURL }}" alt="{{ .Params.title }}" />
 							{{ end }}
 						</div>
 						<div class="column ten wide">
 							<a class="headline" href="{{ .URL }}" rel="bookmark">
-								{{ .Params.title }}
+								{{ .Params.title | safeHTML }}
 							</a>
 							<time class="published" datetime="{{ .Date | dateFormat "2006-01-02 15:04" }}">
 								{{ .Date | dateFormat "January 02, 2006" }}
