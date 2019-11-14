@@ -30,11 +30,10 @@ ul.meta li {float: right;}
 #brand_name {font-family: futura-pt-1,futura-pt-2,sans-serif;}
 #index_list {margin-top: 40px;}
 .ui.items>.item>.content>.header {font-family: futura-pt-1,futura-pt-2,sans-serif;}
-.navbar-header{padding-right:0px;}
-.navbar-header:hover {background: #ff6600;}
-.ui.items>.item>.content>a.header:hover {color: #ff6600;}
+.navbar-header{padding-right:0px;background: red;}
+.ui.items>.item>.content>a.header:hover {color: red;}
 a {color: #ff6600;}
-footer.ui.grid a:hover {background: inherit;color: #ff6600;}
+footer.ui.grid a:hover {background: inherit;color: red;}
 
 @media only screen and (max-width: 767px)
 .ui.items:not(.unstackable)>.item>.image+.content {

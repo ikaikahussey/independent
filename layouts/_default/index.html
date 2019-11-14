@@ -1,5 +1,5 @@
 {{ define "main" }}
-<section class="ui grid" id="index_list" role="main_content">
+<section class="ui grid container" id="index_list" role="main_content">
 	<div class="sixteen wide column">
 		<section class="ui divided relaxed items">
 			{{ $paginator := .Paginate (where .Site.Pages "Type" "story") }}
