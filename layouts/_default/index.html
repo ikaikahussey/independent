@@ -6,28 +6,28 @@
 			{{ range .Paginator.Pages }}
 			<excerpt class="item" id="{{ .Params.url_title }}">
 				{{ if .Params.related_index_topic }}
-					<a class="ui label top left" id="topic" href="/topics/democracy/">
+					<a class="ui label top left" id="topic" href="">
 						{{ .Params.related_index_topic }} <i class="circle right icon"></i>
 					</a>
 				{{ end }}
 				{{ if .Params.art_photo }}
 					<div class="image">
-				    	<img class="" src="{{ .Params.art_photo | relURL }}" alt="{{ .Params.title }}" />
+				    	<a href="{{ .URL }}"><img class="" src="{{ .Params.art_photo | relURL }}" alt="{{ .Params.title }}" /></a></div>
 					</div>
 				{{ end }}
 				{{ if .Params.art_gallery }}
 					<div class="image">
-					    <img class="ui image" src="{{ .Params.art_gallery | relURL }}" alt="{{ .Params.title }}" />
+					    <a href="{{ .URL }}"><img class="ui image" src="{{ .Params.art_gallery | relURL }}" alt="{{ .Params.title }}" /></a>
 					</div>
 				{{ end }}
 				{{ if .Params.art_gallery2 }}
 				<div class="image">
-				    <img class="ui image" src="{{ .Params.art_gallery2 | relURL }}" alt="{{ .Params.title }}" />
+				    <a href="{{ .URL }}"><img class="ui image" src="{{ .Params.art_gallery2 | relURL }}" alt="{{ .Params.title }}" /></a>
 				</div>
 				{{ end }}
 				{{ if .Params.art_thumbnail }}
 				<div class="image">
-				    <img class="ui image" src="{{ .Params.art_thumbnail | relURL }}" alt="{{ .Params.title }}" />
+				    <a href="{{ .URL }}"><img class="ui image" src="{{ .Params.art_thumbnail | relURL }}" alt="{{ .Params.title }}" /></a>
 				</div>
 				{{ end }}
 				<div class="content">

@@ -1,6 +1,6 @@
 .header {font-size:43px;font-family:futura-pt-1, futura-pt-2, sans-serif;font-weight:bold;line-height: 1;}
 a.header {text-decoration:none;color: #333;}
-a.header:hover {color: #ff6600;}
+a.header:hover {color: rgb(246, 59, 10);}
 time {display:block;}
 time.published {opacity:.4;margin-left:0em;font-size:.8em;}
 #branding_nav img {height: 20px;width: auto;}
@@ -17,7 +17,7 @@ article img {margin-bottom: 30px;}
 	border-bottom: 2px #333 solid;
 	font-size: 1em;
 	line-height: 1.3;
-	color: #ff6600;
+	color: rgb(246, 59, 10);
 	font-weight: 700;
 	margin: 20px 0;
 	font-family: futura-pt-1, futura-pt-2, sans-serif;
@@ -30,10 +30,10 @@ ul.meta li {float: right;}
 #brand_name {font-family: futura-pt-1,futura-pt-2,sans-serif;}
 #index_list {margin-top: 40px;}
 .ui.items>.item>.content>.header {font-family: futura-pt-1,futura-pt-2,sans-serif;}
-.navbar-header{padding-right:0px;background: red;}
-.ui.items>.item>.content>a.header:hover {color: red;}
-a {color: #ff6600;}
-footer.ui.grid a:hover {background: inherit;color: red;}
+.navbar-header{padding-right:0px;background: rgb(246, 59, 10);}
+.ui.items>.item>.content>a.header:hover {color: rgb(246, 59, 10);}
+a {color: rgb(246, 59, 10);}
+footer.ui.grid a:hover {background: inherit;color: rgb(246, 59, 10);}
 
 @media only screen and (max-width: 767px)
 .ui.items:not(.unstackable)>.item>.image+.content {
