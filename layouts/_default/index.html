@@ -1,44 +1,49 @@
 {{ define "main" }}
-<section class="ui grid container" id="index_list" role="main_content">
-	<div class="sixteen wide column">
+<section class="ui stackable grid container" id="index_list" role="main_content">
+	<div class="four wide column">
+<!--
+		<div class="ui rail square button test ad" data-text="Square Button">
+		</div>
+-->
+	</div>
+	<div class="twelve wide column">
 		<section class="ui divided relaxed items">
 			{{ $paginator := .Paginate (where .Site.Pages "Type" "story") }}
 			{{ range .Paginator.Pages }}
 			<excerpt class="item" id="{{ .Params.url_title }}">
-				{{ if .Params.related_index_topic }}
-					<a class="ui label top left" id="topic" href="">
-						{{ .Params.related_index_topic }} <i class="circle right icon"></i>
-					</a>
-				{{ end }}
-				{{ if .Params.art_photo }}
-					<div class="image">
-				    	<a href="{{ .URL }}"><img class="" src="{{ .Params.art_photo | relURL }}" alt="{{ .Params.title }}" /></a></div>
-					</div>
-				{{ end }}
-				{{ if .Params.art_gallery }}
-					<div class="image">
-					    <a href="{{ .URL }}"><img class="ui image" src="{{ .Params.art_gallery | relURL }}" alt="{{ .Params.title }}" /></a>
-					</div>
-				{{ end }}
-				{{ if .Params.art_gallery2 }}
-				<div class="image">
-				    <a href="{{ .URL }}"><img class="ui image" src="{{ .Params.art_gallery2 | relURL }}" alt="{{ .Params.title }}" /></a>
-				</div>
-				{{ end }}
-				{{ if .Params.art_thumbnail }}
-				<div class="image">
-				    <a href="{{ .URL }}"><img class="ui image" src="{{ .Params.art_thumbnail | relURL }}" alt="{{ .Params.title }}" /></a>
-				</div>
-				{{ end }}
 				<div class="content">
-					<a class="header" href="{{ .URL }}" rel="bookmark">
-						{{ .Params.title | safeHTML }}
+					<a class="" href="{{ .URL }}" rel="bookmark">
+						<h2>{{ .Params.title | safeHTML }}</h2>
 					</a>
-					<time class="meta" datetime="{{ .Date | dateFormat "2006-01-02 15:04" }}">
-						{{ .Date | dateFormat "January 02, 2006" }}
+
+					<time datetime="{{ .Date | dateFormat "2006-01-02 15:04" }}">
+						<i class="clock icon"></i> {{ .Date | dateFormat "January 02, 2006" }}
 					</time>
+					<p id="user"><i class="user icon"></i> {{ .Params.user | safeHTML }}</p>
+
+					{{ if .Params.related_index_topic }}
+						<a class="ui label top left" id="topic" href="">
+							{{ .Params.related_index_topic }} <i class="circle right icon"></i>
+						</a>
+					{{ end }}
+	
+					{{ if .Params.art_photo }}
+					    	<a href="{{ .URL }}"><img id="post_image" class="ui fluid image" src="{{ .Params.art_photo | relURL }}" alt="{{ .Params.title }}" /></a></div>
+					{{ end }}
+					{{ if .Params.art_gallery }}
+						    <a href="{{ .URL }}"><img id="post_image" class="ui fluid image" src="{{ .Params.art_gallery | relURL }}" alt="{{ .Params.title }}" /></a>
+					{{ end }}
+					{{ if .Params.art_gallery2 }}
+					    <a href="{{ .URL }}"><img id="post_image" class="ui fluid image" src="{{ .Params.art_gallery2 | relURL }}" alt="{{ .Params.title }}" /></a>
+					{{ end }}
+					{{ if .Params.art_thumbnail }}
+					    <a href="{{ .URL }}"><img id="post_image" class="ui fluid image" src="{{ .Params.art_thumbnail | relURL }}" alt="{{ .Params.title }}" /></a>
+					{{ end }}
+
+
+
 					<div class="description">
-						{{ .Params.teaser }}
+						{{ .Content }}
 					</div>
 				</div>
 			</excerpt>

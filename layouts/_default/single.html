@@ -1,53 +1,66 @@
 {{ define "main" }}
-	{{ if .Params.art_photo }}
-	    <img class="cover" src="{{ .Params.art_photo | relURL }}" alt="{{ .Params.title }}" />
-	{{ end }}
-	{{ if .Params.art_gallery }}
-	    <img class="cover" src="{{ .Params.art_gallery | relURL }}" alt="{{ .Params.title }}" />
-	{{ end }}
-	{{ if .Params.art_gallery2 }}
-	    <img class="cover" src="{{ .Params.art_gallery2 | relURL }}" alt="{{ .Params.title }}" />
-	{{ end }}
-	{{ if .Params.art_thumbnail }}
-	    <img class="cover" src="{{ .Params.art_thumbnail | relURL }}" alt="{{ .Params.title }}" />
-	{{ end }}
+{{ if .Params.content_img_path }}
+    <img id="" class="ui fluid image" src="{{ .Params.content_img_path | relURL }}" alt="{{ .Params.title }}" />
+{{ end }}
+{{ if .Params.art_photo }}
+	<img id="" class="ui fluid image" src="{{ .Params.art_photo | relURL }}" alt="{{ .Params.title }}" />
+{{ end }}
+{{ if .Params.art_gallery }}
+	<img id="" class="ui fluid image" src="{{ .Params.art_gallery | relURL }}" alt="{{ .Params.title }}" />
+{{ end }}
+{{ if .Params.art_gallery2 }}
+    <img id="" class="ui fluid image" src="{{ .Params.art_gallery2 | relURL }}" alt="{{ .Params.title }}" />
+{{ end }}
+{{ if .Params.art_thumbnail }}
+    <img id="" class="ui fluid image" src="{{ .Params.art_thumbnail | relURL }}" alt="{{ .Params.title }}" />
+{{ end }}
 
-	<section class="ui grid stackable" id="index_list" role="main_content">
-	  	<div class="twelve wide column">
-	    	<main class="">
-				<article>
-					<header class="header">
-					    {{ .Params.title }}
-					</header>
-					{{ if .Params.subtitle }}
-					    <div class="post-subtitle">
-					      {{ .Params.subtitle | safeHTML }}
-					    </div><!-- .post-subtitle -->
-					{{ end }}
-					<ul class="ui menu">
-						<li class="ui item">
-							<time id="date" datetime="{{ .Date | dateFormat "2006-01-02 15:04" }}">
-						    {{ .Date | dateFormat "Monday, January 2, 2006" }}
-							</time>
-						</li>
-					{{ if .Params.community }}	
-						<li class="ui item"><a href="/community/{{ .Params.community }}">{{ .Params.community }}</a></li>
-					{{ end }}
-					{{ if .Params.related_index_org }}	
-						<li class="ui item"><a href="/topic/.Params.related_index_org">{{ .Params.related_index_org }}</a></li>
-					{{ end }}
-					{{ if .Params.user }}
-						<li class="ui item"><a href=>{{ .Params.user }}</a></li>
-					{{ end }}	
-					</ul>	
-					<div class="" id="content">
-						{{ .Content | safeHTML }}
-					</div><!-- .post-content -->
-					<div>
 
-					</div>
-				</article>
-			</main>
+<section class="ui stackable grid container" id="index_list" role="main_content">
+	<div class="four wide column">
+<!--
+		<div class="ui rail square button test ad" data-text="Square Button">
 		</div>
-	</section>
+-->
+	</div>
+	<div class="twelve wide column">
+		<section class="ui divided relaxed items">
+			<excerpt class="item" id="{{ .Params.url_title }}">
+				<div class="content">
+					<a class="" href="{{ .URL }}" rel="bookmark">
+						<h2>{{ .Params.title | safeHTML }}</h2>
+					</a>
+
+					<time datetime="{{ .Date | dateFormat "2006-01-02 15:04" }}">
+						<i class="clock icon"></i> {{ .Date | dateFormat "January 02, 2006" }}
+					</time>
+					<p id="user"><i class="user icon"></i> {{ .Params.user | safeHTML }}</p>
+
+					{{ if .Params.related_index_topic }}
+						<a class="ui label top left" id="topic" href="">
+							{{ .Params.related_index_topic }} <i class="circle right icon"></i>
+						</a>
+					{{ end }}
+<!--
+	
+					{{ if .Params.art_photo }}
+					    	<a href="{{ .URL }}"><img id="post_image" class="ui fluid image" src="{{ .Params.art_photo | relURL }}" alt="{{ .Params.title }}" /></a></div>
+					{{ end }}
+					{{ if .Params.art_gallery }}
+						    <a href="{{ .URL }}"><img id="post_image" class="ui fluid image" src="{{ .Params.art_gallery | relURL }}" alt="{{ .Params.title }}" /></a>
+					{{ end }}
+					{{ if .Params.art_gallery2 }}
+					    <a href="{{ .URL }}"><img id="post_image" class="ui fluid image" src="{{ .Params.art_gallery2 | relURL }}" alt="{{ .Params.title }}" /></a>
+					{{ end }}
+					{{ if .Params.art_thumbnail }}
+					    <a href="{{ .URL }}"><img id="post_image" class="ui fluid image" src="{{ .Params.art_thumbnail | relURL }}" alt="{{ .Params.title }}" /></a>
+					{{ end }}
+-->
+					<div class="description" style="padding-bottom: 20px;border-bottom: 4px black solid;margin-bottom: 30px;">
+						{{ .Content }}
+					</div>
+			</excerpt>
+		</section>
+	</div>
+</section>
 {{ end }}
