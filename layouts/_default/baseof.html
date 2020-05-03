@@ -1,30 +1,24 @@
 <!doctype html>
 <html>
     <head>    
-        
         <title>{{ if .Title }}{{ .Title }} - {{ end }}The Hawaii Independent</title>
         <meta charset="utf-8">
-       <meta name="google" content="notranslate" />
-        <meta name="description" content="News and analysis">
+		<meta name="google" content="notranslate" />
+        <meta name="description" content="Ideas moving Hawaii forward">
         <meta name="author" content="The Hawaii Independent">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <link rel="stylesheet" type="text/css" href="/assets/css/semantic.min.css" />
-        <link rel="stylesheet" type="text/css" href="/assets/css/hi.css" />
         <link rel="stylesheet" type="text/css" href="/assets/css/mods.css" />
         <link rel="stylesheet" href="https://use.typekit.net/ivs8csc.css">
     </head>
     <body>
         <div id="page" class="">
             {{ partial "header.html" . }}
-            
-                            {{ block "main" . }}{{ end }}
-                  
+				{{ block "main" . }}{{ end }}
             {{ partial "footer.html" . }}
           </div><!-- .site -->
         <!-- Scripts -->
         <script src="https://code.jquery.com/jquery-latest.js" type="7400cf3506345550e833a758-text/javascript"></script>
-
-
     </body> 
 </html>

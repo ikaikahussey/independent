@@ -42,24 +42,16 @@
 					{{ if .Params.art_thumbnail }}
 					    <a href="{{ .URL }}"><img id="post_image" class="ui fluid image" src="{{ .Params.art_thumbnail | relURL }}" alt="{{ .Params.title }}" /></a>
 					{{ end }}
-					{{ if .Params.teaser }}
-						<div class="description">
-							{{ .Params.teaser | safeHTML }} <a href="{{ .URL }}"><i class="icon arrow alternate circle right"></i> Read</a>
-						</div>
-						{{ else }}
-						<div class="description">
-							{{ .Content }}
-						</div>
-					{{ end }}
+
+
+
+					<div class="description">
+						{{ .Content }}
+					</div>
 				</div>
 			</excerpt>
 		{{ end }}
 		</section>
-		
-			<div class="ui item pagination">	
-	{{ partial "pagination.html" . }}
-	</div>
-		
 	</div>
 <!-- 	<div class="four wide column"> -->
 
@@ -71,7 +63,9 @@
 
 <!-- 	</div> -->
 
-
+	<div class="ui item pagination">	
+	{{ partial "pagination.html" . }}
+	</div>
 	
 </section>
 
