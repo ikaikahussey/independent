@@ -2,10 +2,10 @@
 
 
 
-.header {font-size:43px;font-family:futura-pt-1, futura-pt-2, sans-serif;font-weight:bold;line-height: 1;}
+.header {font-size:43px;font-family:futura-pt, sans-serif;font-weight:bold;line-height: 1;}
 a.header {text-decoration:none;color: #333;}
 a.header:hover {color: rgb(246, 59, 10);}
-time, p#user {display:block;font-family: futura-pt-1,futura-pt-2,sans-serif;margin:0em;font-size:.6em;text-transform: uppercase;}
+time, p#user {display:block;font-family: futura-pt,sans-serif;margin:0em;font-size:.6em;text-transform: uppercase;}
 #branding_nav img {height: 20px;width: auto;}
 #branding_nav {background: #333;}
 .stories .ui.segment {border-radius: 0;padding:20px 0px;}
