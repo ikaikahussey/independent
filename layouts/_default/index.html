@@ -44,7 +44,7 @@
 					{{ end }}
 					{{ if .Params.teaser }}
 						<div class="description">
-							{{ .Params.teaser | safeHTML }} <a href="{{ .URL }}"><i class="icon arrow alternate circle right"></i> Read</a>
+							{{ .Params.teaser | safeHTML }} <a class="read" href="{{ .URL }}">Read <i class="icon arrow alternate circle right"></i></a>
 						</div>
 						{{ else }}
 						<div class="description">
