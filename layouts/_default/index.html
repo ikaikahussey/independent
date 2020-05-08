@@ -3,13 +3,13 @@
 
 
 <section class="ui stackable grid container" id="index_list" role="main_content">
-	<div class="four wide column">
+	<div class="two wide column">
 <!--
 		<div class="ui rail square button test ad" data-text="Square Button">
 		</div>
 -->
 	</div>
-	<div class="twelve wide column">
+	<div class="fourteen wide column">
 		<section class="ui divided relaxed items">
 			{{ $paginator := .Paginate (where .Site.Pages "Type" "story") }}
 			{{ range .Paginator.Pages }}
