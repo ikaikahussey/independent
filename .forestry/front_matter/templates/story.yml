@@ -32,3 +32,7 @@ fields:
 - type: text
   name: username
   label: username
+- name: index__topic
+  type: tag_list
+  default: []
+  label: 'index: topic'
