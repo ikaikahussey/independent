@@ -1,0 +1,34 @@
+---
+label: Story
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: url_title
+  label: url_title
+- type: text
+  name: entry_id
+  label: entry_id
+- type: text
+  name: channel_id
+  label: channel_id
+- type: text
+  name: author_id
+  label: author_id
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: page_location
+  label: page_location
+- type: text
+  name: art_gallery2
+  label: art_gallery2
+- type: text
+  name: user
+  label: user
+- type: text
+  name: username
+  label: username
