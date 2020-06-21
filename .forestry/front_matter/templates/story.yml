@@ -5,6 +5,9 @@ fields:
 - type: text
   name: title
   label: title
+- type: datetime
+  name: date
+  label: date
 - type: text
   name: url_title
   label: url_title
@@ -17,9 +20,6 @@ fields:
 - type: text
   name: author_id
   label: author_id
-- type: datetime
-  name: date
-  label: date
 - type: text
   name: page_location
   label: page_location
