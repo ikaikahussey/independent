@@ -42,5 +42,17 @@ fields:
   type: tag_list
   default: []
   label: 'index: topic'
+- name: related_topic
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: pages
+      section: topic
+      file: 
+      path: 
+  label: Related topic
 pages:
 - content/story/we-need-to-make-courageous-choices.md
