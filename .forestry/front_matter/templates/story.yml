@@ -42,3 +42,5 @@ fields:
   type: tag_list
   default: []
   label: 'index: topic'
+pages:
+- content/story/we-need-to-make-courageous-choices.md
