@@ -17,4 +17,5 @@ fields:
       format: markdown
   label: Description
 pages:
+- content/topic/covid-19-response.md
 - content/topic/tmt.md
