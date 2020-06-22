@@ -16,6 +16,8 @@ sections:
   label: Story
   create: all
   match: "**/*"
+  templates:
+  - story
 upload_dir: static/uploads
 public_path: "/uploads"
 front_matter_path: ''
