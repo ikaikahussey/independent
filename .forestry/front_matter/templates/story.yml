@@ -7,7 +7,7 @@ fields:
   name: title
   label: title
 - type: datetime
-  name: date
+  name: _Date
   label: date
   default: now
   config:
