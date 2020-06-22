@@ -1,4 +1,5 @@
 +++
+_Date = "06/20/2020 12:00 AM -1000"
 art_gallery2 = ""
 author_id = ""
 channel_id = ""
@@ -11,6 +12,5 @@ title = "Test of new content"
 url_title = "test"
 user = ""
 username = ""
-+++
 
-Lorem gypsum.
++++
