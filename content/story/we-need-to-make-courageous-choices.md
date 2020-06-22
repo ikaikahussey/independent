@@ -2,7 +2,7 @@
 art_gallery2 = ""
 author_id = ""
 channel_id = ""
-date = "06/21/2020 10:03 AM -1000"
+date = ""
 entry_id = ""
 index__topic = []
 page_location = ""
