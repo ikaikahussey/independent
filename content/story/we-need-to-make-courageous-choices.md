@@ -1,5 +1,6 @@
 +++
-_Date = "2020/06/20"
+Date = 2020-06-21T10:00:00Z
+_Date = "06/20/2020 12:00 AM -1000"
 art_gallery2 = ""
 author_id = ""
 channel_id = ""
@@ -12,6 +13,5 @@ title = "Test of new content"
 url_title = "test"
 user = ""
 username = ""
-+++
 
-THis is a very nice file.
++++
