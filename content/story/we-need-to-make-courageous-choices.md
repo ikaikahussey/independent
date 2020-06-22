@@ -11,5 +11,6 @@ title = "Test of new content"
 url_title = "test"
 user = ""
 username = ""
-
 +++
+
+Lorem gypsum.
