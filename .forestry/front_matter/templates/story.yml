@@ -54,5 +54,14 @@ fields:
       file: 
       path: 
   label: Related topic
+- name: body
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Body
 pages:
 - content/story/1-10-koolauloa-board-meeting-minutes-for-1-13.html
