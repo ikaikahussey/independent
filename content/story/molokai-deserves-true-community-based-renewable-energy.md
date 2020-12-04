@@ -3,7 +3,7 @@ Date = 2020-12-03T08:49:00Z
 art_gallery2 = ""
 author_id = ""
 channel_id = ""
-draft = true
+draft = false
 entry_id = ""
 index__topic = []
 page_location = ""
@@ -14,6 +14,7 @@ user = ""
 username = ""
 tags = "Verbatim"
 +++
+
 As you may know by now, Hawaiian Electric, as required by the Public Utilities Commission (PUC), is planning to seek proposals for their “Phase 2” Community Based Renewable Energy (CBRE) project on Molokai in early 2021. The timing of the CBRE request for proposal is an opportunity for Molokai to formalize its own grassroots cooperative and compete for a project that will reduce our reliance on diesel generated electricity, improve grid resiliency, and bring support and relief to our overburdened rate payers.
 
 Molokai community members have joined together to create Molokai Renewable Energy Cooperative (MREC) and are preparing to submit the coopʻs first project, a 2.75MW solar plus battery project, which could meet the electric needs of 1000 households. Our group of community members have been working towards energy independence on Molokai for several years leading up to this project.
