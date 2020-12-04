@@ -17,6 +17,7 @@ fields:
       format: markdown
   label: Description
 pages:
+- content/topic/climate.md
 - content/topic/covid-19-response.md
 - content/topic/energy-transition.md
 - content/topic/tmt.md
