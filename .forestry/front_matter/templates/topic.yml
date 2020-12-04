@@ -18,4 +18,5 @@ fields:
   label: Description
 pages:
 - content/topic/covid-19-response.md
+- content/topic/energy-transition.md
 - content/topic/tmt.md

@@ -32,16 +32,12 @@ fields:
 - type: text
   name: art_gallery2
   label: art_gallery2
-- type: select
-  name: mea kakau
-  label: mea kakau
-  config:
-    required: true
-    options: []
-    source:
-      type: pages
-      section: authors
-      file: data/meakakau.yml
+- type: text
+  name: user
+  label: user
+- type: text
+  name: username
+  label: username
 - name: index__topic
   type: tag_list
   default: []
