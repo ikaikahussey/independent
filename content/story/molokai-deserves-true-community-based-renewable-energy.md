@@ -10,7 +10,7 @@ page_location = ""
 related_topic = []
 title = "Molokai Deserves True Community-Based Renewable Energy"
 url_title = ""
-user = ""
+user = "Todd Yamashita, Lori Buchanan, Christopher OʻBrien, Sequoya, Makena Fernandez"
 username = ""
 tags = "Verbatim"
 +++
