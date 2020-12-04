@@ -7,11 +7,11 @@ fields:
   name: title
   label: title
 - type: datetime
-  name: Date
+  name: date
   label: date
   default: now
   config:
-    date_format: MM/DD/YYYY
+    date_format: YYYY-MM-DD
     time_format: h:mm A ZZ
     export_format: YYYY-MM-DD h:mm A ZZ
 - type: text
@@ -24,20 +24,19 @@ fields:
   name: channel_id
   label: channel_id
 - type: text
-  name: author_id
-  label: author_id
-- type: text
   name: page_location
   label: page_location
 - type: text
   name: art_gallery2
   label: art_gallery2
-- type: text
-  name: user
-  label: user
-- type: text
-  name: username
-  label: username
+- type: select
+  name: author
+  label: author
+  config:
+    required: true
+    source:
+      type: pages
+      section: authors
 - name: index__topic
   type: tag_list
   default: []
@@ -54,15 +53,3 @@ fields:
       file: 
       path: 
   label: Related topic
-- name: body
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: Body
-pages:
-- content/story/1-10-koolauloa-board-meeting-minutes-for-1-13.html
-- content/story/molokai-deserves-true-community-based-renewable-energy.md
