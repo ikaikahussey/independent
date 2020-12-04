@@ -1,0 +1,18 @@
+---
+meakakau:
+    ikaikahussey:
+        name = "Ikaika Hussey"
+        image = "/uploads/2017/01/01/john.jpg"
+    staff:
+        name = "Staff"
+        image = "/uploads/2017/01/01/john.jpg"
+    travis:
+        name = "Travis Quezon"
+        image = "/uploads/2017/01/01/john.jpg"
+    will:
+        name = "Will Caron"
+        image = "/uploads/2017/01/01/john.jpg"
+    samson:
+        name = "Samson Reiny"
+        image = "/uploads/2017/01/01/john.jpg"
+---
