@@ -3,33 +3,31 @@
 
 
 <section class="ui stackable grid container" id="index_list" role="main_content">
-	<div class="two wide column">
+	<div class="four wide column">
 <!--
 		<div class="ui rail square button test ad" data-text="Square Button">
 		</div>
 -->
 	</div>
-	<div class="fourteen wide column">
+	<div class="twelve wide column">
 		<section class="ui divided relaxed items">
 			{{ $paginator := .Paginate (where .Site.Pages "Type" "story") }}
 			{{ range .Paginator.Pages }}
 			<excerpt class="item" id="{{ .Params.url_title }}">
 				<div class="content">
-					<a class="" href="{{ .URL }}" rel="bookmark">
+					<a class="" href="{{ if .Params.link }}{{ .Params.link }}{{ else }}{{ .URL }}{{ end }}" rel="bookmark">
 						<h2>{{ .Params.title | safeHTML }}</h2>
 					</a>
-
+					{{ if .Params.source }} <a class="read" href="{{ .Params.link }}"><i class="linkify icon"></i> {{ .Params.source }}</a>{{ end }}
 					<time datetime="{{ .Date | dateFormat "2006-01-02 15:04" }}">
 						<i class="clock icon"></i> {{ .Date | dateFormat "January 02, 2006" }}
 					</time>
-					<p id="user"><i class="user icon"></i> {{ .Params.user | safeHTML }}</p>
-
+					{{ if .Params.user }}<p id="user"><i class="user icon"></i> {{ .Params.user | safeHTML }}</p>{{ end }}
 					{{ if .Params.related_index_topic }}
 						<a class="ui label top left" id="topic" href="">
 							{{ .Params.related_index_topic }} <i class="circle right icon"></i>
 						</a>
 					{{ end }}
-	
 					{{ if .Params.art_photo }}
 					    	<a href="{{ .URL }}"><img id="post_image" class="ui fluid image" src="{{ .Params.art_photo | relURL }}" alt="{{ .Params.title }}" /></a></div>
 					{{ end }}
@@ -51,31 +49,16 @@
 							{{ .Content }}
 						</div>
 					{{ end }}
+					<!-- {{ if .Params.related_topic }}
+						<aside>{{ .Params.related_topic }}</aside>
+					{{ end }} -->
 				</div>
 			</excerpt>
 		{{ end }}
 		</section>
-		
-			<div class="ui item pagination">	
-	{{ partial "pagination.html" . }}
+		<div class="ui item pagination">	
+			{{ partial "pagination.html" . }}
+		</div>		
 	</div>
-		
-	</div>
-<!-- 	<div class="four wide column"> -->
-
-<!--
-			<div class="ui button test ad" data-text="Button">
-				Holiday Tree Sale
-			</div>
--->
-
-<!-- 	</div> -->
-
-
-	
 </section>
-
-
-
-	    
 {{ end }}
